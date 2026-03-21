@@ -5,16 +5,16 @@
   "license": "proprietary",
   "brand": "Knoppies",
   "author": "Grant Pieterse",
-  "authorEmail": "",
-  "authorUrl": "",
-  "pluginUrl": "",
+  "authorEmail": "grant@grantpieterse.com",
+  "authorUrl": "https://knoppies.grantpieterse.com",
+  "pluginUrl": "https://knoppies.grantpieterse.com/motherfuzzer",
   "manualUrl": "",
-  "sourceUrl": "",
+  "sourceUrl": "https://github.com/grant-pie/motherfuzzer",
   "donateUrl": "",
   "changelogUrl": "",
   "modules": [
     {
-      "slug": "MyModule",
+      "slug": "MotherFuzzer",
       "name": "MotherFuzzer",
       "description": "Fuzz effect module",
       "tags": []
