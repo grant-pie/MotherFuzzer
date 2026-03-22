@@ -173,10 +173,21 @@ struct MotherFuzzerPanel : Widget {
 		nvgText(args.vg, mpx(10.0f), mpx(102.f), "In", NULL);
 		nvgText(args.vg, mpx(20.5f), mpx(102.f), "Out", NULL);
 
-		// Brand name (#555555)
+		// Brand name: "VON" white + "K" purple, matching website accent
 		nvgFontSize(args.vg, 7.f);
-		nvgFillColor(args.vg, nvgRGB(0x55, 0x55, 0x55));
-		nvgText(args.vg, cx, mpx(114.f), "KNOPPIES", NULL);
+		nvgTextAlign(args.vg, NVG_ALIGN_LEFT | NVG_ALIGN_MIDDLE);
+		float brandY = mpx(114.f);
+		float bVon[4], bK[4];
+		nvgTextBounds(args.vg, 0, 0, "VON", NULL, bVon);
+		nvgTextBounds(args.vg, 0, 0, "K",   NULL, bK);
+		float vonW  = bVon[2];
+		float kW    = bK[2];
+		float brandX = cx - (vonW + kW) / 2.f;
+		nvgFillColor(args.vg, nvgRGB(0xf4, 0xf5, 0xf7));
+		nvgText(args.vg, brandX, brandY, "VON", NULL);
+		nvgFillColor(args.vg, nvgRGB(0xc0, 0x84, 0xfc));
+		nvgText(args.vg, brandX + vonW, brandY, "K", NULL);
+		nvgTextAlign(args.vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
 	}
 };
 
